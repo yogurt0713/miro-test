@@ -13,12 +13,15 @@
                         onClick: () => {
                             //
                             console.log("hello")
-                            miro.board.widget.create({
-                                type: "sticker",
-                                text: "Hello",
-                                x: 10,
-                                y: 10
+                            miro.board.widgets.create({
+                                "type": "sticker",
+                                "text": "some text",
+                                "capabilities": {
+                                    "editable": false
+                                }
                             })
+
+
                         }
                     }
                 }
