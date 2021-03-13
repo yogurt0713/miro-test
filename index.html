@@ -1,3 +1,8 @@
+ const options = { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer cZe9qmnM9PML1ZxDYSmsQsS3yHM' }, body: JSON.stringify({ name: 'boadr-create', sharingPolicy: {access: 'private', teamAccess: 'edit'}, description:
+'ボードを作ってみよう' }) }; fetch('https://api.miro.com/v1/boards?fields=createboard', options) .then(response => console.log(response)) .catch(err => console.error(err));
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +10,7 @@
     <script src="https://miro.com/app/static/sdk.1.1.js"></script>
     <script>
         miro.onReady(() => {
+
             miro.initialize({
                 extensionPoints: {
                     bottomBar: {
