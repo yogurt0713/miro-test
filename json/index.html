@@ -3,28 +3,35 @@
 
 <head>
     <script>
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer cZe9qmnM9PML1ZxDYSmsQsS3yHM'
-            },
-            body: JSON.stringify({
-                name: 'board-create',
-                sharingPolicy: {
-                    access: 'private',
-                    teamAccess: 'edit'
+        function onButtonClick() {
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer cZe9qmnM9PML1ZxDYSmsQsS3yHM'
                 },
-                description: 'ボードをmiroに作ってみよう'
-            })
-        };
+                body: JSON.stringify({
+                    name: 'board-create',
+                    sharingPolicy: {
+                        access: 'private',
+                        teamAccess: 'edit'
+                    },
+                    description: 'ボードをmiroに作ってみよう'
+                })
+            };
 
 
-        fetch('https://api.miro.com/v1/boards?fields=createboard', options).then(response => console.log(response)).catch(err => console.error(err));
+            fetch('https://api.miro.com/v1/boards?fields=createboard', options).then(response => console.log(response)).catch(err => console.error(err));
 
-        console.log("test");
+            console.log("test");
+        }
     </script>
-
 </head>
+
+<body>
+    <input type="button" value="Exec" onclick="OnButtonClick();" /><br />
+    <br />
+    <div id="output"></div>
+</body>
 
 </html>
