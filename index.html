@@ -32,8 +32,3 @@
 </head>
 
 </html>
-
-
-function createImage(canvasX, canvasY, url) { return miro.board.widgets.create({ type: 'image', url: url, x: canvasX, y: canvasY, }) } miro.onReady(async () => { miro.initialize({ extensionPoints: { bottomBar: async () => { const authorized = await miro.isAuthorized()
-if (authorized) { return { title: 'Prototype', svgIcon: icon24, onClick: () => { miro.board.ui.openBottomPanel('bottom-panel.html', {width: EDIT_WIDTH}) }, } } }, }, }) const params = await miro.board.__getParamsFromURL() if (params.runPrototyping) {
-miro.showNotification('Enter prototyping mode...') miro.addListener('ALL_WIDGETS_LOADED', async () => { miro.__setRuntimeState({enterPrototypingMode: true}) miro.board.ui.openBottomPanel('bottom-panel.html') }) } })
