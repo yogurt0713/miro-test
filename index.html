@@ -16,7 +16,7 @@
                         title: 'Some title',
                         svgIcon: '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',
                         onClick: async() => {
-                            console.log("howdyyy")
+                            console.log("howdyyyy")
                             await miro.board.widgets.create({
                                 "type": "image",
                                 "url": "https://yogurt0713.github.io/mob0_web/images/cocosoco.png",
@@ -32,10 +32,11 @@
                     }
                 }
             })
+            const canvas = document.createElement('canvas');
+            document.body.appendChild(cannvas);
+            console.log("haha")
+
         })
-        const canvas = document.createElement('canvas');
-        document.body.appendChild(cannvas);
-        console.log("haha")
     </script>
 </head>
 
